@@ -1,6 +1,6 @@
 package Utilities;
 
-import Models.ApiResponse;
+import Models.Pokemon;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 
@@ -9,9 +9,9 @@ import java.io.FileReader;
 
 public class JsonFileUtil {
 
-    public static ApiResponse getPokemonInfoFromJson(File jsonFile)
+    public static Pokemon getPokemonInfoFromJson(File jsonFile)
     {
-        ApiResponse apiResponse = null; //creating an api object
+        Pokemon pokemon = null; //creating an api object
 
         try(
                 FileReader fileReader = new FileReader("src/pokedex.json");
@@ -20,7 +20,7 @@ public class JsonFileUtil {
 
         {
             Gson gson = new Gson();
-            apiResponse = gson.fromJson(jsonReader, ApiResponse.class);
+            pokemon = gson.fromJson(jsonReader, Pokemon.class);
             System.out.println();
         }
         catch (Exception e)
@@ -30,6 +30,6 @@ public class JsonFileUtil {
 
 
 
-        return apiResponse; //return it
+        return pokemon; //return it
     }
 }

@@ -10,7 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class PokeApiUtil {
-    public static void getPokemonFromSearchBar (int searchinput)
+    public static void getPokemonOnLoad(int searchinput)
     {
         //Method to delete the file to rewrite it without hiccups
         //was done in class and I liked it

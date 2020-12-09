@@ -1,10 +1,13 @@
 package Utilities;
 
+import Controllers.PokemonDetailsController;
+import Models.Pokemon;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import java.io.IOException;
 
@@ -27,10 +30,13 @@ public class SceneChange {
         loader.setLocation(new Object(){}.getClass().getResource(viewName));
         Parent root = loader.load();
         Scene scene = new Scene(root);
-        //scene.getStylesheets().add("stylesheet.css");  //uncomment when css file is ready to be added
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.setTitle(title);
         stage.show();
     }
+
+
+
+
 }
