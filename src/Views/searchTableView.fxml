@@ -3,8 +3,11 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 
 
 <AnchorPane prefHeight="674.0" prefWidth="974.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SearchTableController">
@@ -12,8 +15,15 @@
       <Label layoutX="102.0" layoutY="83.0" text="Search Pokémon" />
       <Button layoutX="558.0" layoutY="78.0" mnemonicParsing="false" onAction="#searchButton" text="Search" />
       <TextField fx:id="searchTextField" layoutX="226.0" layoutY="78.0" prefHeight="31.0" prefWidth="295.0" promptText="Search For pokemon by name or number" />
-      <ListView fx:id="resultListView" layoutX="94.0" layoutY="131.0" prefHeight="452.0" prefWidth="758.0" />
+      <ListView fx:id="resultListView" layoutX="94.0" layoutY="131.0" prefHeight="452.0" prefWidth="531.0" />
       <Label layoutX="226.0" layoutY="27.0" text="National Pokedex" />
       <Label fx:id="rowsReturnedLabel" layoutX="102.0" layoutY="612.0" text="Pokemon Returned" />
+      <Label layoutX="654.0" layoutY="146.0" text="List of most popular pokemon to search:" />
+      <TextArea editable="false" layoutX="654.0" layoutY="189.0" prefHeight="200.0" prefWidth="284.0" text="List of most popular pokemon to search:&#10;pikachu&#10;electabuzz&#10;bulbasaur&#10;charizard&#10;mightyena&#10;" />
+      <StackPane layoutX="688.0" layoutY="433.0" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </StackPane>
    </children>
 </AnchorPane>
