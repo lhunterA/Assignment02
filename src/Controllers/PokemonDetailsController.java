@@ -2,14 +2,13 @@ package Controllers;
 
 
 import Models.Pokemon;
-import Utilities.JsonFileUtil;
 import Utilities.SceneChange;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-
-import java.io.File;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -17,14 +16,20 @@ import java.util.ResourceBundle;
 public class PokemonDetailsController implements Initializable {
 
     @FXML private Label nameLabel;
+
+    @FXML private Label numLabel;
+
+    @FXML private ImageView spriteImageView;
+
     private Pokemon pokemon;
 
 
     public void setPokemon(Pokemon pokemon)
     {
         this.pokemon = pokemon;
-        System.out.println(pokemon + "In the set pokemon method");
         nameLabel.setText(pokemon.getName());
+        numLabel.setText(pokemon.getPokedexNum());
+        spriteImageView.setImage(new Image(pokemon.getSprites().getFront_default()));
     }
 
     @Override
