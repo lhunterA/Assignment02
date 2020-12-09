@@ -1,14 +1,9 @@
-import Models.ApiResponse;
-import com.google.gson.Gson;
-import com.google.gson.stream.JsonReader;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
-import java.io.FileReader;
 
 public class Main extends Application {
 

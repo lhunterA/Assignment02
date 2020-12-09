@@ -10,7 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class PokeApiUtil {
-    public static void getPokemonFromSearchBar (String searchinput)
+    public static void getPokemonFromSearchBar (int searchinput)
     {
         //Method to delete the file to rewrite it without hiccups
         //was done in class and I liked it
@@ -30,7 +30,7 @@ public class PokeApiUtil {
 
         try {
             HttpResponse<Path> response = client.send(request,
-                                                      HttpResponse.BodyHandlers.ofFile(Paths.get("src/pokedex.json")));
+                    HttpResponse.BodyHandlers.ofFile(Paths.get("src/pokedex.json")));
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
