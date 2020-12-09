@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="674.0" prefWidth="974.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SearchTableController">
    <children>
       <Label layoutX="102.0" layoutY="83.0" text="Search Pokémon" />
-      <Button layoutX="558.0" layoutY="78.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="558.0" layoutY="78.0" mnemonicParsing="false" onAction="#searchButton" text="Search" />
       <TextField fx:id="searchTextField" layoutX="226.0" layoutY="78.0" prefHeight="31.0" prefWidth="295.0" promptText="Search For pokemon by name or number" />
       <ListView fx:id="resultListView" layoutX="94.0" layoutY="131.0" prefHeight="452.0" prefWidth="758.0" />
       <Label layoutX="226.0" layoutY="27.0" text="National Pokedex" />
