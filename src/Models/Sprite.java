@@ -25,6 +25,7 @@ public class Sprite {
      */
     public void setFront_default(String front_default) {
         String[] str = front_default.split(".");
+
         if (str[2] == "png") //if it is a valid image
         {
             this.front_default = front_default;

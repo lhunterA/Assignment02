@@ -24,7 +24,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
          Parent root = FXMLLoader.load(getClass().getResource("Views/SearchTableView.fxml"));
          Scene scene = new Scene(root);
-         //scene.getStylesheets().add("Utilities/styleSheet.css");
+         scene.getStylesheets().add("Views/style.css");
          primaryStage.setScene(scene);
          primaryStage.setTitle("Pokédex");
          primaryStage.getIcons().add(new Image("Views/Icon.png"));

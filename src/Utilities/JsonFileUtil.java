@@ -20,25 +20,18 @@ public class JsonFileUtil {
 
     public static Pokemon getPokemonInfoFromJson(File jsonFile)
     {
-        Pokemon pokemon = null; //creating an api object
+        Pokemon pokemon = null;
 
-        try(
-                FileReader fileReader = new FileReader("src/pokedex.json");
-                JsonReader jsonReader = new JsonReader(fileReader);
-        )
-
+        try(FileReader fileReader = new FileReader("src/pokedex.json");
+            JsonReader jsonReader = new JsonReader(fileReader);)
         {
             Gson gson = new Gson();
             pokemon = gson.fromJson(jsonReader, Pokemon.class);
-            System.out.println();
         }
         catch (Exception e)
         {
             e.printStackTrace();
         }
-
-
-
-        return pokemon; //return it
+        return pokemon;
     }
 }
