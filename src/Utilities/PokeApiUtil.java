@@ -1,3 +1,12 @@
+/**
+ * Name: Lindsay Hunter
+ * Student Number: 200425671
+ * Class: COMP 1011 - Advanced Object Oriented Programming (Java 3)
+ * Assignment: Using JSON and API's to make a simple GUI to display information to the user
+ *
+ * This File:
+ */
+
 package Utilities;
 
 import java.io.File;

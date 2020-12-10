@@ -1,12 +1,18 @@
+/**
+ * Name: Lindsay Hunter
+ * Student Number: 200425671
+ * Class: COMP 1011 - Advanced Object Oriented Programming (Java 3)
+ * Assignment: Using JSON and API's to make a simple GUI to display information to the user
+ *
+ * This File:
+ */
+
 package Controllers;
 
 import Models.Pokemon;
 
 import Utilities.JsonFileUtil;
 import Utilities.PokeApiUtil;
-import Utilities.SceneChange;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -25,50 +31,48 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SearchTableController implements Initializable {
+public class SearchTableController implements Initializable
+{
 
-    @FXML
-    private ListView<Pokemon> resultListView;
-
-    @FXML
-    private Label rowsReturnedLabel;
-
-    @FXML
-    private ImageView imageView;
-
+    @FXML private ListView<Pokemon> resultListView;
+    @FXML private Label rowsReturnedLabel;
+    @FXML private ImageView imageView;
     private Pokemon response;
-
-    private Pokemon pokemonToPass;
-    String str;
+    @FXML private Label learnMoreLabel;
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        for (int i = 1; i <= 30; i++) {
+    public void initialize(URL location, ResourceBundle resources)
+    {
+        learnMoreLabel.setVisible(false);
+
+        for (int i = 1; i <= 10; i++) //for each pokemon (150)
+        {
             PokeApiUtil.getPokemonOnLoad(i);
             File jsonFile = new File("src/pokedex.json");
             response = JsonFileUtil.getPokemonInfoFromJson(jsonFile);
-            resultListView.getItems().addAll(response); //return an array of pokemon - Auto calls toString
+            resultListView.getItems().addAll(response);
         }
 
         rowsReturnedLabel.setText("Number Showing: " + resultListView.getItems().size());
 
         resultListView.getSelectionModel().selectedItemProperty().addListener(
                 (obs, oldValue, pokemonSelected) -> {
-                    imageView.setImage(new Image(pokemonSelected.getSprites().getFront_default())); //add the sprite variable to the image view
+                    imageView.setImage(new Image(pokemonSelected.getSprites().getFront_default()));
+                    learnMoreLabel.setVisible(true);
                 });
-            }
-    @FXML
-    private void viewPokemonDetails(ActionEvent event) throws IOException {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(new Object(){}.getClass().getResource("../Views/PokemonDetailsView.fxml"));
-            Parent root = loader.load();
-            Scene scene = new Scene(root);
-            PokemonDetailsController controller = loader.getController();
-            controller.setPokemon(resultListView.getSelectionModel().getSelectedItem());
-            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.setTitle("Pokedex");
+    }
 
-            stage.show();
-        }
+    @FXML
+    public void viewPokemonDetails(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(new Object(){}.getClass().getResource("../Views/PokemonDetailsView.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        PokemonDetailsController controller = loader.getController();
+        controller.setPokemon(resultListView.getSelectionModel().getSelectedItem());
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Pokédex");
+        stage.show();
+    }
 }

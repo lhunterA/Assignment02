@@ -1,3 +1,12 @@
+/**
+ * Name: Lindsay Hunter
+ * Student Number: 200425671
+ * Class: COMP 1011 - Advanced Object Oriented Programming (Java 3)
+ * Assignment: Using JSON and API's to make a simple GUI to display information to the user
+ *
+ * This File: The main method that starts the application.
+ */
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,7 +22,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-         Parent root = FXMLLoader.load(getClass().getResource("Views/searchTableView.fxml"));
+         Parent root = FXMLLoader.load(getClass().getResource("Views/SearchTableView.fxml"));
          Scene scene = new Scene(root);
          //scene.getStylesheets().add("Utilities/styleSheet.css");
          primaryStage.setScene(scene);
