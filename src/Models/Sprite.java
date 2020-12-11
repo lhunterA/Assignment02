@@ -14,6 +14,10 @@ public class Sprite {
 
     private String front_default;
 
+    /**
+     * Returns the string of the png url that is used by the api to get the image
+     * @return
+     */
     public String getFront_default()
     {
         return front_default;

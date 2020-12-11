@@ -4,7 +4,8 @@
  * Class: COMP 1011 - Advanced Object Oriented Programming (Java 3)
  * Assignment: Using JSON and API's to make a simple GUI to display information to the user
  *
- * This File:
+ * This File: Using a FileReader object grabs the information from the pokedex.json. Uses a Gson to deserialize the information
+ * to the Pokemon class to create pokemon objects
  */
 
 package Utilities;

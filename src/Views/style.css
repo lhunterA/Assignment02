@@ -1,3 +1,13 @@
+/*
+ * Name: Lindsay Hunter
+ * Student Number: 200425671
+ * Class: COMP 1011 - Advanced Object Oriented Programming (Java 3)
+ * Assignment: Using JSON and API's to make a simple GUI to display information to the user
+ *
+ * This File: The css style sheet to make the pokedex look good.
+ */
+
+
 .root{
     -fx-background-color: #ED1E24;
 

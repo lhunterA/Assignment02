@@ -4,7 +4,7 @@
  * Class: COMP 1011 - Advanced Object Oriented Programming (Java 3)
  * Assignment: Using JSON and API's to make a simple GUI to display information to the user
  *
- * This File:
+ * This File: Contains the logic and sets the pokemon selected and formats the labels to the selected pokemon properties.
  */
 
 package Controllers;
@@ -33,17 +33,22 @@ public class PokemonDetailsController implements Initializable {
     @FXML private ImageView spriteImageView;
     @FXML private Label pokemonHeightLabel;
     @FXML private Label pokemonWeightLabel;
+    @FXML private Label baseExperienceLabel;
     private Pokemon pokemon;
 
-
+    /**
+     * Setting the pokemon selected from the SearchTableController and assigning the values to the labels
+     * @param pokemon
+     */
     public void setPokemon(Pokemon pokemon)
     {
         this.pokemon = pokemon;
         nameLabel.setText(pokemon.getName());
-        numLabel.setText(pokemon.getPokedexNum());
+        numLabel.setText(String.valueOf(pokemon.getPokedexNum()));
         spriteImageView.setImage(new Image(pokemon.getSprites().getFront_default()));
         pokemonHeightLabel.setText(pokemon.getHeight() + "cm");
         pokemonWeightLabel.setText(pokemon.getWeight() + "kg");
+        baseExperienceLabel.setText(String.valueOf(pokemon.getBaseExperience()));
     }
 
     @Override
@@ -51,6 +56,14 @@ public class PokemonDetailsController implements Initializable {
     }
 
 
+    /**
+     * Original Code from Jaret Wright - COMP 1011- Class - Week 06.
+     * Change the scene back to the main view with all the pokemon to learn about.
+     *
+     * Will be called when the button on this view is clicked.
+     * @param event
+     * @throws IOException
+     */
     @FXML
     public void goBackButton(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();

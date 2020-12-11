@@ -4,7 +4,7 @@
  * Class: COMP 1011 - Advanced Object Oriented Programming (Java 3)
  * Assignment: Using JSON and API's to make a simple GUI to display information to the user
  *
- * This File: The main method that starts the application.
+ * This File: The main method that starts the application. Loads the table with all the pokemon listed.
  */
 
 import javafx.application.Application;
