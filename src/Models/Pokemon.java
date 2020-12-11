@@ -9,7 +9,6 @@
 package Models;
 
 import com.google.gson.annotations.SerializedName;
-import java.util.ArrayList;
 
 public class Pokemon
 {
@@ -21,7 +20,6 @@ public class Pokemon
     private Sprite sprites;
     private String height; //Originally in decimetres
     private String weight; //Originally in hectograms
-    //private ArrayList<Object> types;
 
     public Pokemon(String pokedexNum, String name, Sprite sprites, String height, String weight) {
         setPokedexNum(pokedexNum);
@@ -29,9 +27,6 @@ public class Pokemon
         setSprites(sprites);
         setHeight(height);
         setWeight(weight);
-        //this.types = types;
-
-        //setTypes(types);
     }
 
     public String getPokedexNum() {
@@ -131,14 +126,6 @@ public class Pokemon
         else
             throw new IllegalArgumentException("Pokemon must exist, but smaller than 2000lbs");
     }
-/*
-    public PokemonType getTypes() {
-        return types;
-    }
-
-    public void setTypes(PokemonType types) {
-        this.types = types;
-    }*/
 
     /**
      * Return the capitalized name of the pokemon.

@@ -24,6 +24,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -33,7 +34,9 @@ import java.util.ResourceBundle;
 
 public class SearchTableController implements Initializable
 {
-
+    @FXML private StackPane imgStackPane;
+    @FXML private Label titleLabel;
+    @FXML private ImageView topImage;
     @FXML private ListView<Pokemon> resultListView;
     @FXML private Label rowsReturnedLabel;
     @FXML private ImageView imageView;
@@ -44,7 +47,6 @@ public class SearchTableController implements Initializable
     public void initialize(URL location, ResourceBundle resources)
     {
         learnMoreLabel.setVisible(false);
-
         for (int i = 1; i <= 10; i++) //for each pokemon (150)
         {
             PokeApiUtil.getPokemonOnLoad(i);

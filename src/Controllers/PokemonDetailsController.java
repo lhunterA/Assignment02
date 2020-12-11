@@ -33,7 +33,6 @@ public class PokemonDetailsController implements Initializable {
     @FXML private ImageView spriteImageView;
     @FXML private Label pokemonHeightLabel;
     @FXML private Label pokemonWeightLabel;
-    @FXML private Label pokemonTypeLabel;
     private Pokemon pokemon;
 
 
@@ -45,7 +44,6 @@ public class PokemonDetailsController implements Initializable {
         spriteImageView.setImage(new Image(pokemon.getSprites().getFront_default()));
         pokemonHeightLabel.setText(pokemon.getHeight() + "cm");
         pokemonWeightLabel.setText(pokemon.getWeight() + "kg");
-        //pokemonTypeLabel.setText(pokemon.getTypes().getType().getTypeName());
     }
 
     @Override

@@ -1,0 +1,48 @@
+.root{
+    -fx-background-color: #ED1E24;
+
+}
+
+.label{
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.button {
+    -fx-background-radius: 30px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+}
+
+#titleLabel{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+
+}
+
+.list-view
+{
+    -fx-padding: 10px;
+    -fx-border-color: black;
+    -fx-border-width: 5px;
+}
+
+#imgStackPane
+{
+    -fx-padding: 10px;
+    -fx-background-color: #DEDEDE;
+    -fx-border-color: black;
+    -fx-border-width: 5px;
+}
+
+#learnMoreLabel{
+    -fx-font-weight: normal;
+}
+
+#spriteStackPane{
+    -fx-padding: 10px;
+    -fx-background-color: #DEDEDE;
+    -fx-border-color: black;
+    -fx-border-width: 5px;
+}
