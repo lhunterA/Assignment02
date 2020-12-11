@@ -30,6 +30,10 @@
     -fx-font-weight: bold;
 
 }
+#pokemonDetailsLabel{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
 
 .list-view
 {

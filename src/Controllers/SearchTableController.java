@@ -64,7 +64,7 @@ public class SearchTableController implements Initializable
         imageView.setVisible(false);
         imgStackPane.setVisible(false);
 
-        for (int i = 1; i <= 10; i++) //for each pokemon (150). Could output 809.
+        for (int i = 1; i <= 60; i++) //for each pokemon (150). Could output 809.
         {
             PokeApiUtil.getPokemonOnLoad(i);
             File jsonFile = new File("src/pokedex.json");

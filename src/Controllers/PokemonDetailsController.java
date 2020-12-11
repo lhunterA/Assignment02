@@ -48,7 +48,7 @@ public class PokemonDetailsController implements Initializable {
         spriteImageView.setImage(new Image(pokemon.getSprites().getFront_default()));
         pokemonHeightLabel.setText(pokemon.getHeight() + "cm");
         pokemonWeightLabel.setText(pokemon.getWeight() + "kg");
-        baseExperienceLabel.setText(String.valueOf(pokemon.getBaseExperience()));
+        baseExperienceLabel.setText(pokemon.getBaseExperience() + "exp");
     }
 
     @Override
